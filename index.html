@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Bob Phillips Photography</title>
+    <link rel="shortcut icon" href="./images/favicon.ico">
+    <link href="stylesheet.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="header">
+        <a href="index.html"><h1 class="logo">BOB PHILLIPS</h1></a>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+            <li><a href="photos.html" class="menu-item">PHOTOS</a></li>
+            <li><a href="about.html" class="menu-item">ABOUT ME</a></li>
+            <li><a href="contact.html" class="menu-item">CONTACT</a></li>
+            <li><a href="blog.html" class="menu-item">BLOG</a></li>
+        </ul>
+    </div>
+
+    <div class="img-container">
+        <img name="slide" width="auto" height="auto" />
+    </div>
+
+    <script type="text/javascript">
+        var i = 0; // Defining the start point
+        var images = []; // Here I put the image in to an array
+        var time = 2500; // I define the amount of time I use to switch 
+
+        // Image List
+        images[0] = "SOFDEV/IMAGE (1).jpg";
+        images[1] = "SOFDEV/IMAGE (2).jpg";
+        images[2] = "SOFDEV/IMAGE (3).jpg";
+        images[3] = "SOFDEV/IMAGE (4).jpg";
+        images[4] = "SOFDEV/IMAGE (5).jpg";
+        images[5] = "SOFDEV/IMAGE (6).jpg";
+        images[6] = "SOFDEV/IMAGE (7).jpg";
+        images[7] = "SOFDEV/IMAGE (8).jpg";
+        images[7] = "SOFDEV/IMAGE (9).jpg";
+        images[8] = "SOFDEV/IMAGE (10).jpg";
+        images[9] = "SOFDEV/IMAGE (11).jpg";
+        images[10] = "SOFDEV/IMAGE (12).jpg";
+        images[11] = "SOFDEV/IMAGE (13).jpg";
+        images[12] = "SOFDEV/IMAGE (14).jpg";
+        images[13] = "SOFDEV/IMAGE (15).jpg";
+        images[14] = "SOFDEV/IMAGE (16).jpg";
+        images[15] = "SOFDEV/IMAGE (17).jpg";
+        images[16] = "SOFDEV/IMAGE (18).jpg";
+        images[17] = "SOFDEV/IMAGE (19).jpg";
+        images[18] = "SOFDEV/IMAGE (19).jpg";
+        images[19] = "SOFDEV/IMAGE (20).jpg";
+        images[20] = "SOFDEV/IMAGE (21).jpg";
+        images[21] = "SOFDEV/IMAGE (22).jpg";
+        images[22] = "SOFDEV/IMAGE (23).jpg";
+        images[23] = "SOFDEV/IMAGE (24).jpg";
+        images[24] = "SOFDEV/IMAGE (25).jpg";
+        images[25] = "SOFDEV/IMAGE (26).jpg";
+        images[26] = "SOFDEV/IMAGE (27).jpg";
+        images[27] = "SOFDEV/IMAGE (28).jpg";
+        images[28] = "SOFDEV/IMAGE (29).jpg";
+
+        // Change Image
+        function changeImg() {
+            document.slide.src = images[i];
+
+            // Check if index are under the max
+            if (i < images.length - 1) {
+                // Add 1 to index
+                i++;
+            } else {
+                // Reset Back To O
+                i = 0;
+            }
+
+            // Run the changing of image function every x seconds
+            setTimeout("changeImg()", time);
+        }
+
+        // Run changing of image when page loads
+        window.onload = changeImg;
+    </script>
+
+    <footer>
+        <div class="footer-area">
+            <h6 class="footer-text">BOB PHILLIPS PHOTOGRAPHY &copy;</h6>
+        </div>
+    </footer>
+
+</body>
+
+</html>
